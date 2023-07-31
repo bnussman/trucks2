@@ -134,7 +134,8 @@ export async function getTrucks() {
         brand: "TOYOTA",
         pageNo: currentPage,
         pageSize: 75,
-        seriesCodes: 'tundrahybrid,tacoma,tacomahybrid,hybridtacoma,sequoia',
+        // seriesCodes: 'tundrahybrid,tacoma,tacomahybrid,hybridtacoma,sequoia',
+        seriesCodes: 'tacoma,tacomahybrid',
         distance: 200,
       },
   });
@@ -151,9 +152,9 @@ export async function getTrucks() {
       }
 
       // Skip 3ed gen tacomas
-      if (truck.model.marketingName.toLowerCase().includes("tacoma") && truck.year < 2024) {
-        continue;
-      }
+      // if (truck.model.marketingName.toLowerCase().includes("tacoma") && truck.year < 2024) {
+      //   continue;
+      // }
 
       trucks.push(truck);
     }
